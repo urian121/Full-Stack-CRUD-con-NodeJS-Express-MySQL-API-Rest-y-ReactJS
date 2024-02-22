@@ -21,7 +21,7 @@
 
 #### Nota
 
-    En la carpeta api-rest-con-nodejs-express-mysql eta la API REST desarrollado con Nodejs y Express para manejar todo el Backend.
+    En la carpeta api-rest-con-nodejs-express-mysql esta la API REST desarrollada con Nodejs y Express para manejar todo el Backend.
 
 ### Expresiones de Gratitud 🎁
 
