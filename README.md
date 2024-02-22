@@ -19,6 +19,10 @@
 
 ![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/crud-full-stack-con-node-y-react.png)
 
+#### Nota
+
+    En la carpeta api-rest-con-nodejs-express-mysql eta la API REST desarrollado con Nodejs y Express para manejar todo el Backend.
+
 ### Expresiones de Gratitud 🎁
 
     Comenta a otros sobre este proyecto 📢
