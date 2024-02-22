@@ -48,7 +48,7 @@ const HomePage = () => {
       const response = await axios.get(`${URL_API}/${id}`);
       console.log("datos del alumno:", response.data);
       setShowRegistroForm(false);
-      setAlumnoEditar(response.data); // Almacenar los datos del alumno
+      setAlumnoEditar(response.data[0]); // Almacenar los datos del alumno
     } catch (error) {
       console.error("Error al actualizar el alumno:", error);
     }
@@ -72,7 +72,7 @@ const HomePage = () => {
       console.log("Información del Alumno a actualizar:", datosAlumno);
       // Realizar la solicitud PUT al backend
       const response = await axios.put(
-        `${URL_API}${datosAlumno.id}`,
+        `${URL_API}/${datosAlumno.id}`,
         datosAlumno
       );
       console.log("Respuesta de la API:", response.data);
