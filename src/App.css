@@ -17,12 +17,12 @@ label {
   justify-content: flex-start;
 }
 .btn_add {
-  border: 1px solid #06c046 !important;
-  background-color: #06c046 !important;
+  border: 1px solid #7366ff !important;
+  background-color: #7366ff !important;
 }
 hr {
   height: 0.1px !important;
-  color: #06c046 !important;
+  color: #7366ff !important;
   width: 100% !important;
   background-color: red;
 }
@@ -38,7 +38,7 @@ hr {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #15bc57;
+  background-color: #7366ff;
   margin: 10px;
   display: inline-flex;
   justify-content: center;
@@ -48,5 +48,5 @@ hr {
 .bi-arrow-left {
   font-size: 40px;
   font-weight: 800;
-  color: #15bc57;
+  color: #7366ff;
 }
