@@ -1,105 +1,86 @@
-# Cómo crear un API REST usando Node.js, Express y MySQL 😱
+# API REST - Backend
 
-#### Descubre cómo crear tu propia API REST con Node.js y Express de manera sencilla y eficiente. Aprende los fundamentos de los métodos HTTP y explora cómo desarrollar tus propias APIs de forma rápida y práctica. ¡Domina el poder de Node.js para construir aplicaciones web escalables y flexibles!
+**API REST para gestión de alumnos con Node.js, Express y MySQL**
 
-#### Inicializar un proyecto en Node.js:
+## 🚀 Instalación
 
-    npm init -y
+```bash
+# Instalar dependencias
+npm install
 
-#### Instalar
+# Ejecutar servidor
+node server.js
+```
 
-    npm install express axios cors mysql2
+## 📦 Dependencias
 
-#### Para instalar todas las dependencias del proyecto, solo basta ejecutar
+- **express:** Framework web para Node.js
+- **mysql2:** Cliente MySQL para Node.js
+- **cors:** Middleware para habilitar CORS
 
-    npm install o npm i
+## ⚙️ Configuración
 
-#### Para correr el proyecto, solo debes ejecutar el proyectar
+- **Puerto:** 3000
+- **Base URL:** http://localhost:3000
+- **Tipo de módulo:** ESM ("type": "module")
 
-    node --watch app.js ----> Opcion 1
-    node app.js    -----> Opcion 2
+## 📋 Endpoints API
 
-##### Nota
+### GET `/alumnos`
+**Obtener todos los alumnos**
+```json
+[
+  {
+    "id": 1,
+    "nombre_alumno": "Juan Pérez",
+    "email_alumno": "juan@gmail.com",
+    "curso_alumno": "React",
+    "sexo_alumno": "M",
+    "habla_ingles": 1,
+    "fecha_registro": "2024-02-18 20:49:51"
+  }
+]
+```
 
-    Se debe definir en el package.json la propiedad   "type": "module", indica que el proyecto o archivo JavaScript está utilizando el módulo ECMAScript (ESM) en lugar del sistema de módulos CommonJS.
-    "type": "module", indica que usaremos la especificación de módulos ECMAScript, que es una forma más moderna y estándar de organizar y modularizar el código en JavaScript.
+### GET `/alumnos/:id`
+**Obtener alumno por ID**
+```json
+{
+  "id": 1,
+  "nombre_alumno": "Juan Pérez",
+  "email_alumno": "juan@gmail.com",
+  "curso_alumno": "React",
+  "sexo_alumno": "M",
+  "habla_ingles": 1,
+  "fecha_registro": "2024-02-18 20:49:51"
+}
+```
 
-#####
+### POST `/alumnos`
+**Crear nuevo alumno**
+```json
+{
+  "nombre_alumno": "María García",
+  "email_alumno": "maria@gmail.com",
+  "curso_alumno": "Node.js",
+  "sexo_alumno": "F",
+  "habla_ingles": 1
+}
+```
 
-## Lista de Endpoint API
+### PUT `/alumnos/:id`
+**Actualizar alumno existente**
+```json
+{
+  "nombre_alumno": "Juan Carlos Pérez",
+  "email_alumno": "juancarlos@gmail.com",
+  "curso_alumno": "Full Stack",
+  "sexo_alumno": "M",
+  "habla_ingles": 1
+}
+```
 
-#### Método GET ✅
+### DELETE `/alumnos/:id`
+**Eliminar alumno por ID**
 
-    👉 http://127.0.0.1:3000/alumnos
-
-        [
-            {
-                "id": "1",
-                "nombre_alumno": "Braudin",
-                "email_alumno": "braudin@gmail.com",
-                "curso_alumno": "React Native",
-                "sexo_alumno": "M",
-                "habla_ingles": "0",
-                "fecha_registro": "2024-02-18 20:49:51"
-            },
-            {
-                "id": "16",
-                "nombre_alumno": "urian Viera",
-                "email_alumno": "urian@gmail.com",
-                "curso_alumno": "REACT",
-                "sexo_alumno": "M",
-                "habla_ingles": "0",
-                "fecha_registro": "2024-02-18 20:58:43"
-            }
-        ]
-
-#### Método GET ✅
-
-    👉 http://127.0.0.1:3000/alumnos/16
-        {
-            "id": "16",
-            "nombre_alumno": "urian Viera",
-            "email_alumno": "urian@gmail.com",
-            "curso_alumno": "REACT",
-            "sexo_alumno": "M",
-            "habla_ingles": "0",
-            "fecha_registro": "2024-02-18 20:58:43"
-        }
-
-#### Método POST ✅
-
-    👉 http://127.0.0.1:3000/alumnos
-        {
-            "nombre_alumno": "Torres ",
-            "email_alumno": "torres@gmail.com",
-            "curso_alumno": "sql",
-            "sexo_alumno": "F",
-            "habla_ingles": "1",
-            "fecha_registro": "2024-02-18 20:49:51"
-        }
-
-#### Método PUT ✅
-
-    👉 http://127.0.0.1:3000/alumnos/18
-        {
-            "id": "1",
-            "nombre_alumno": "Braudin Laya",
-            "email_alumno": "braudin@gmail.com",
-            "curso_alumno": "React Native",
-            "sexo_alumno": "M",
-            "habla_ingles": "0",
-            "fecha_registro": "2024-02-18 20:49:51"
-        }
-
-#### Método DELETE ✅
-
-    👉 http://127.0.0.1:3000/alumnos/15
-
-### Expresiones de Gratitud 🎁
-
-    Comenta a otros sobre este proyecto 📢
-    Invita una cerveza 🍺 o un café ☕
-    Paypal iamdeveloper86@gmail.com
-    Da las gracias públicamente 🤓.
-
-## No olvides SUSCRIBIRTE 👍
+Respuesta: `200 OK`

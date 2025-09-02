@@ -1,33 +1,55 @@
-# Desarrollo Full Stack: Creación, Gestión y Visualización de Datos con Node.js, Express, MySQL, API REST y ReactJS
+# CRUD Full Stack - Gestión de Alumnos
 
-##### Este proyecto es un sistema completo de gestión de datos que emplea tecnologías de punta en el desarrollo web. Utiliza Node.js y Express para construir una API RESTful que se comunica con una base de datos MySQL. La API permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) en los datos almacenados. Por otro lado, la interfaz de usuario está desarrollada con ReactJS, brindando una experiencia interactiva y amigable para los usuarios finales. Esta combinación de tecnologías ofrece una solución robusta y escalable para desarrollar aplicaciones web modernas.
+**Sistema completo de gestión de estudiantes con Node.js, Express, MySQL y React**
 
-##### Instalar axios, para mejorar las solicitudes HTTP a la API
+![Resultado final](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/crud-full-stack-con-node-y-react.png)
 
-    npm i axios
+## 🚀 Tecnologías
 
-#### Instalar la libreria react-toastify para crear las alertas.
+- **Backend:** Node.js + Express + MySQL
+- **Frontend:** React + Vite + Axios
+- **Base de datos:** MySQL (tabla `tbl_alumnos`)
+- **Notificaciones:** React Toastify
 
-    npm install --save react-toastify
+## 📋 Funcionalidades
 
-#### Para correr el proyecto, solo basta instalar las dependencias y correr el proyecto
+- ✅ Crear estudiantes
+- ✅ Listar todos los estudiantes
+- ✅ Editar información de estudiantes
+- ✅ Eliminar estudiantes
+- ✅ Validación de formularios
+- ✅ Notificaciones de éxito/error
 
-    npm install
-    npm run dev
+## 🛠️ Instalación
 
-#### Resultado final
+### 1. Configurar Backend
+```bash
+cd api-rest-con-nodejs-express-mysql
+npm install
+node server.js
+```
 
-![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/crud-full-stack-con-node-y-react.png)
+### 2. Configurar Frontend
+```bash
+npm install
+npm run dev
+```
 
-#### Nota
+### 3. Base de Datos
+Importar el archivo `BD/bd_crud_react_php_mysql.sql` en MySQL
 
-    En la carpeta api-rest-con-nodejs-express-mysql esta la API REST desarrollada con Nodejs y Express para manejar todo el Backend.
+## 🌐 URLs
+
+- **Frontend:** http://localhost:5173
+- **API Backend:** http://localhost:3000
+- **Endpoints:** `/alumnos` (GET, POST, PUT, DELETE)
+
 
 ### Expresiones de Gratitud 🎁
 
-    Comenta a otros sobre este proyecto 📢
-    Invita una cerveza 🍺 o un café ☕
-    Paypal iamdeveloper86@gmail.com
-    Da las gracias públicamente 🤓.
+- Comenta a otros sobre este proyecto 📢
+- Invita una cerveza 🍺 o un café ☕
+- Paypal iamdeveloper86@gmail.com
+- Da las gracias públicamente 🤓.
 
-## No olvides SUSCRIBIRTE 👍
+### No olvides SUSCRIBIRTE 👍
